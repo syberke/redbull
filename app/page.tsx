@@ -19,7 +19,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
    <iframe
   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-  src="https://www.youtube.com/embed/Md_vMPavfwA?si=02xw1kxfSFgqcvRm"
+  src=""
   title="YouTube Video Background"
   frameBorder="0"
   allow="autoplay; fullscreen"
@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-rb-navy dark:bg-black">
+      <section className="py-20 bg-rb-navy dark:bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}

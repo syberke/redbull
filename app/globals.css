@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Formula1';
+  src: url('/fonts/Formula1.woff2') format('woff2'),
+       url('/fonts/Formula1.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -76,7 +85,8 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+      body {
+        @apply bg-background text-foreground;
+        font-family: 'Formula1', sans-serif;
+      }
 }
