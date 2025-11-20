@@ -8,11 +8,13 @@ import { Button } from '@/components/ui/button';
 import { SectionTitle } from '@/components/section-title';
 import { Card, CardContent } from '@/components/ui/card';
 import { Navbar } from '@/components/navbar';
+import { drivers } from "@/data/drivers";
+import { DriverCard } from "@/components/DriverCard";
 
 export default function Home() {
   return (
     <div className="overflow-hidden">
-      
+
       <Navbar />
 
 
@@ -121,7 +123,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+ <section>
+<div className="min-h-screen
+                bg-rb-navy
+                py-24
+                relative
+                overflow-hidden">
 
+  {/* BACKGROUND LOGO */}
+  <div className="absolute inset-0
+                  bg-[url('/images/redbull-logo.png')]
+                  bg-center
+                  bg-contain
+                  bg-no-repeat
+                  opacity-10
+                  pointer-events-none" />
+
+  <div className="container mx-auto px-4 relative z-10">
+    <h1 className="text-center text-6xl font-extrabold text-white mb-20 tracking-wide">
+      Meet the Team
+    </h1>
+
+    <div className="flex flex-wrap justify-center gap-14">
+      {drivers.map((d, i) => (
+        <DriverCard key={i} driver={d} />
+      ))}
+    </div>
+  </div>
+
+</div>
+
+      </section>
       {/* Call to Action */}
       <section className="py-20 bg-rb-navy dark:bg-background">
         <div className="container mx-auto px-4">
