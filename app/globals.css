@@ -86,7 +86,7 @@
     @apply border-border;
   }
       body {
-        @apply bg-background text-foreground;
+        @apply   bg-[#0B0D10] text-foreground;
         font-family: 'Formula1', sans-serif;
       }
 }

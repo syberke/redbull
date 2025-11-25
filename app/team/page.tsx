@@ -11,33 +11,7 @@ import {
   TrendingUp,
   Award,
 } from 'lucide-react';
-
-const teamStats = [
-  {
-    icon: Trophy,
-    label: 'World Championships',
-    value: '6',
-    description: 'Constructor Championships',
-  },
-  {
-    icon: Award,
-    label: 'Race Wins',
-    value: '100+',
-    description: 'Total victories',
-  },
-  {
-    icon: Users,
-    label: 'Team Members',
-    value: '800+',
-    description: 'Dedicated professionals',
-  },
-  {
-    icon: Wrench,
-    label: 'Innovation',
-    value: 'Cutting-Edge',
-    description: 'Advanced technology',
-  },
-];
+import Image from 'next/image';
 
 const teamValues = [
   {
@@ -68,54 +42,51 @@ const teamValues = [
 
 export default function TeamPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <section className="relative py-20 bg-rb-navy dark:bg-black">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center text-white"
-          >
-            <h1 className="text-5xl md:text-7xl font-black mb-6">
-              ORACLE RED BULL
-              <br />
-              <span className="text-rb-yellow">RACING TEAM</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-              A legacy of excellence, innovation, and championship-winning
-              performance in Formula 1 racing.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-[#0B0D10]">
+<section className="relative h-screen w-full overflow-hidden">
 
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {teamStats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card className="text-center border-2 border-transparent hover:border-rb-yellow transition-all">
-                  <CardContent className="p-6">
-                    <stat.icon className="h-10 w-10 mx-auto mb-4 text-rb-yellow" />
-                    <p className="text-3xl font-bold mb-1">{stat.value}</p>
-                    <p className="font-semibold mb-1">{stat.label}</p>
-                    <p className="text-xs text-muted-foreground">
-                      {stat.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <Image
+      src="/team.jpg"
+      alt="Red Bull Racing Background"
+      fill
+      className="object-cover"
+    />
+  </div>
+
+  {/* Blur Overlay */}
+  <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+
+  {/* Content */}
+<div className="relative z-10 flex flex-col justify-center h-full px-8 md:px-20">
+
+  <h1
+    className="
+      text-left
+      text-6xl md:text-[11rem]
+      font-black
+      leading-none
+      text-white
+      drop-shadow-2xl
+      relative
+      translate-y-10 md:translate-y-20
+      md:ml-40
+    "
+    style={{ letterSpacing: '2px' }}
+  >
+    THE TEAM
+  </h1>
+
+</div>
+
+
+  <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#0B0D10]" />
+
+</section>
+
+
+     
 
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -182,7 +153,7 @@ export default function TeamPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-rb-navy dark:bg-rb-navy/50 border-rb-yellow/20">
+            <Card className="bg-[#0A1018] border-rb-yellow/20">
               <CardContent className="p-8 text-white dark:text-gray-100">
                 <h3 className="text-2xl font-bold mb-4 text-rb-yellow">
                   Our Mission
@@ -200,7 +171,8 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-rb-navy dark:bg-black">
+      <section className="py-20 bg-[#0B0D10]
+">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}

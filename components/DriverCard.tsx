@@ -22,7 +22,7 @@ export function DriverCard({ driver }: { driver: any }) {
       {/* RedBull Logo Background */}
       <div className="absolute inset-0 opacity-10 z-0">
         <Image
-          src="/redbull-logo.png" // ganti sesuai path kamu
+          src="/redbull.png" 
           fill
           className="object-contain object-center"
           alt="RedBull Logo"

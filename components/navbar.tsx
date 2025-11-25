@@ -32,7 +32,11 @@ export function Navbar() {
     <nav
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
-        scrolled ? 'bg-background/90 border-border/20 backdrop-blur-md' : 'bg-transparent border-transparent'
+scrolled
+  ? 'bg-[#0D1117]/90 border-[#1A1D22] backdrop-blur-md'
+  : 'bg-transparent border-transparent'
+
+
       )}
     >
       <div className="container mx-auto px-4">
